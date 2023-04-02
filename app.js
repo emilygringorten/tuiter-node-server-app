@@ -10,7 +10,7 @@ import TuitsController
 // developers use app to configure the server on what to do when various types of requesets are recieved
 const app = express()
 app.use(cors())
-// configures an HTTP handler by mapping url pattern '/hello' to a function that hangles the HTTP request (listen)
+// configures an HTTP handler by mapping url pattern '/hello' to a function that handles the HTTP request (listen)
 // app.get('/hello', (req, res) => {res.send('Life is good!')})
 // app.get('/', (req, res) => {res.send('Welcome to Full Stack Development!')})
 app.use(express.json());
