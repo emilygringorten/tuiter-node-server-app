@@ -7,7 +7,10 @@ import UserController
     from "./controllers/users/users-controller.js"
 import TuitsController
     from "./controllers/tuits/tuits-controller.js";
-// developers use app to configure the server on what to do when various types of requesets are recieved
+import mongoose from "mongoose";
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
+    || 'mongodb://127.0.0.1:27017/tuiter'
+mongoose.connect(CONNECTION_STRING);// developers use app to configure the server on what to do when various types of requesets are recieved
 const app = express()
 app.use(cors())
 // configures an HTTP handler by mapping url pattern '/hello' to a function that handles the HTTP request (listen)
